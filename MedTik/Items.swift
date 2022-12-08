@@ -15,7 +15,7 @@ struct Items: View {
         func body(content: Content) -> some View {
             content
                 .font(.headline)
-                .foregroundColor(.blue)
+                .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
                 .background(Color.teal)
@@ -24,26 +24,26 @@ struct Items: View {
                 .padding(.trailing)
         }
     }
-//    struct TexStyleModifier: ViewModifier {
-//
-//        func body(content: Content) -> some View {
-//            content
-//                .font(.headline)
-//                .foregroundColor(.blue)
-//                .padding(.leading)
-//                .padding(.trailing)
-//        }
-//    }
+    struct TexStyleModifier: ViewModifier {
+
+        func body(content: Content) -> some View {
+            content
+                .font(.headline)
+                .foregroundColor(.black)
+                .padding(.leading)
+                .padding(.trailing)
+        }
+    }
     
     struct TextFieldModifier: ViewModifier {
         func body(content: Content) -> some View {
             content
                 .font(.headline)
                 .padding()
-                .foregroundColor(.blue)
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
-                .background(Color.teal)
+                .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
                 .padding(.leading)
                 .padding(.trailing)

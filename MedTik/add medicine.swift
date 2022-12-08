@@ -21,20 +21,29 @@ struct add_medicine: View {
     var body: some View {
 
         
-        VStack{
-            TextField("add medicine", text: $Addmedicine)
-            
-                .modifier(Items.TextFieldModifier())
-            
-            TextField("add name", text: $addName)
-                .modifier(Items.TextFieldModifier())
-            
-            Button {
+        VStack(alignment: .leading, spacing: 17){
+            VStack(alignment: .leading){
+                Text("Medicine Name")
+                    .modifier(Items.TexStyleModifier())
+                TextField("add medicine", text: $Addmedicine)
+                    .modifier(Items.TextFieldModifier())
+            }
+            VStack(alignment: .leading){
+                Text("Strength")
+                    .modifier(Items.TexStyleModifier())
+                TextField("Strength", text: $Addmedicine)
+                    .modifier(Items.TextFieldModifier())
+            }
+            VStack{
+                Button {
 
-            } label: {
-                Text("Add")
-                
-            } .modifier(Items.ButtonModifier())
+                } label: {
+                    Text("Add")
+                    
+                } .modifier(Items.ButtonModifier())
+                    .padding(.top)
+            }
+      
                
 
         }
