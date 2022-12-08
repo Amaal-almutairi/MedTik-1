@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		E00C294529405EAC00FEDD6D /* MedTikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C294429405EAC00FEDD6D /* MedTikApp.swift */; };
-		E00C294729405EAC00FEDD6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C294629405EAC00FEDD6D /* ContentView.swift */; };
 		E00C294929405EAD00FEDD6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00C294829405EAD00FEDD6D /* Assets.xcassets */; };
 		E00C294C29405EAD00FEDD6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00C294B29405EAD00FEDD6D /* Preview Assets.xcassets */; };
 		E00C294E29405EAD00FEDD6D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C294D29405EAD00FEDD6D /* Persistence.swift */; };
 		E00C295129405EAD00FEDD6D /* MedTik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E00C294F29405EAD00FEDD6D /* MedTik.xcdatamodeld */; };
+		E00C29802941C7D700FEDD6D /* add medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C297F2941C7D700FEDD6D /* add medicine.swift */; };
+		E00C29822941CCF700FEDD6D /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C29812941CCF700FEDD6D /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E00C294129405EAC00FEDD6D /* MedTik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedTik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00C294429405EAC00FEDD6D /* MedTikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTikApp.swift; sourceTree = "<group>"; };
-		E00C294629405EAC00FEDD6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E00C294829405EAD00FEDD6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E00C294B29405EAD00FEDD6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E00C294D29405EAD00FEDD6D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E00C295029405EAD00FEDD6D /* MedTik.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedTik.xcdatamodel; sourceTree = "<group>"; };
 		E00C295229405EAD00FEDD6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E00C297F2941C7D700FEDD6D /* add medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "add medicine.swift"; sourceTree = "<group>"; };
+		E00C29812941CCF700FEDD6D /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				E00C294429405EAC00FEDD6D /* MedTikApp.swift */,
-				E00C294629405EAC00FEDD6D /* ContentView.swift */,
 				E00C294829405EAD00FEDD6D /* Assets.xcassets */,
 				E00C294D29405EAD00FEDD6D /* Persistence.swift */,
+				E00C297F2941C7D700FEDD6D /* add medicine.swift */,
+				E00C29812941CCF700FEDD6D /* Items.swift */,
 				E00C295229405EAD00FEDD6D /* Info.plist */,
 				E00C294F29405EAD00FEDD6D /* MedTik.xcdatamodeld */,
 				E00C294A29405EAD00FEDD6D /* Preview Content */,
@@ -145,9 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00C29802941C7D700FEDD6D /* add medicine.swift in Sources */,
+				E00C29822941CCF700FEDD6D /* Items.swift in Sources */,
 				E00C294E29405EAD00FEDD6D /* Persistence.swift in Sources */,
 				E00C295129405EAD00FEDD6D /* MedTik.xcdatamodeld in Sources */,
-				E00C294729405EAC00FEDD6D /* ContentView.swift in Sources */,
 				E00C294529405EAC00FEDD6D /* MedTikApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

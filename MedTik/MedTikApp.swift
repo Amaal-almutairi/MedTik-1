@@ -13,7 +13,7 @@ struct MedTikApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            add_medicine()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
