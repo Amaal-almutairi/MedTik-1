@@ -9,12 +9,19 @@ import SwiftUI
 
 @main
 struct MedTikApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @StateObject var vmYourMedication:YourMedicationListVM = YourMedicationListVM()
+   // let persistenceController = PersistenceController.shared
+   
+    
     var body: some Scene {
         WindowGroup {
-            add_medicine()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                add_medicine()
+                   
+            }
+            .environmentObject(vmYourMedication)
+               // .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
 }

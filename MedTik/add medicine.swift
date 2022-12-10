@@ -9,41 +9,45 @@ import SwiftUI
 
 
 
+
 struct add_medicine: View {
-    
-  
-    
+
+    @EnvironmentObject var vmYourMedication:YourMedicationListVM
+    @State var image = ""
     @State var NameTF = ""
     @State var StrengthTF = ""
     @State var NumberOfPillTF = ""
     @State var textEditorInstructions: String = "Type Somthing ..."
     @State var DateOfBegine = Date()
-    @State var DateOfEnd:Date = Date()
+    @State var DateOfEnd = Date()
     @State var EndingDate:Date = Calendar.current.date (from:
     DateComponents (year: 2018)) ?? Date()
-    
-    @State var TimeOfthefirstdose:Date = Date()
-    
-    @State private var IsExhandedList = false
-    @State private var IsExhandedList1 = false
-    @State private var IsExhandedList2 = false
-    @State private var selectedNum = "Every Day"
+
+    @State var TimeOfthefirstdose = Date()
+
+    @State  var IsExhandedList = false
+    @State  var IsExhandedList1 = false
+    @State  var IsExhandedList2 = false
+    @State  var selectedNum = "Every Day"
     @State var Options:[String] = ["Evry Day","Day By Day","Twice in week","Once a week"]
-    @State private var selectedTime = "\(2) hour"
+    @State  var selectedTime = "\(2) hour"
     @State var OptionsTimeOfFrequancy:[String] = ["\(2) hour","\(4) hour","\(6) hour","\(8) hour"]
-    @State private var selectedWarningLabel = "Warning Label"
+    @State  var selectedWarningLabel = "Warning Label"
     @State var OptionsWarningLabel:[String] = ["Before Brakfast","Before Lanch","Before Dinner"]
     //@State var savedText: String = ""
-    
+
+   // @State  var MedicationInfo: [ListMediciations] = []
+
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter ()
         formatter.dateStyle = .medium
         formatter.timeStyle = .medium
         return formatter
     }
-    
+
     var body: some View {
-        
+//       @State var StrengthMedicine = Int(StrengthTF)
+
        NavigationView {
            Form {
                VStack(alignment: .leading, spacing: 10){
@@ -55,13 +59,14 @@ struct add_medicine: View {
                                    .background(Color.teal)
                                    .aspectRatio(contentMode: .fill)
                                    .clipShape(Circle())
-                                   .padding(8)
+                                   .padding(10)
+                                   .padding(.leading)
                       //     .frame(width: 70,height: 70)
-                         
-                          
-                           
+
+
+
                    }.padding(.leading,100)
-                   
+
                    VStack(alignment: .leading){
                        Text("Medicine Name")
                            .padding(.leading)
@@ -73,7 +78,7 @@ struct add_medicine: View {
                        Text("Strength")
                            .padding(.leading)
                            .modifier(Items.TexStyleModifier())
-                       TextField("Strength", text: $StrengthTF)
+                       TextField("Strength", text:$StrengthTF)
                            .modifier(Items.TextFieldModifier())
                            .keyboardType(.numberPad)
                    }
@@ -103,51 +108,55 @@ struct add_medicine: View {
                    VStack(alignment: .leading){
                        DatePicker("Date Of Begine", selection: $DateOfBegine, displayedComponents: .date)
                            .modifier(Items.TexStyleModifier())
-                     
+
                        DatePicker("Date Of End", selection: $DateOfEnd)
                            .datePickerStyle(.wheel)
 
                            .modifier(Items.TexStyleModifier())
                        DatePicker("Time Of the first dose ", selection: $TimeOfthefirstdose, displayedComponents: .hourAndMinute)
-                          
+
                            .modifier(Items.TexStyleModifier())
                        DropDownMenu
                        DropDownMenuTimeOfFrequancy
                        DropDownMenuWarningLabel
                    }.padding()
-                   
-                 
+
+
                    VStack{
                        Button {
-                           // savedText = textEditorText
+                          
+                           guard !NameTF.isEmpty else {return}
+                           AddMedicine()
+                     
+
                        } label: {
                            Text("Add")
-                           
+
                        } .modifier(Items.ButtonModifier())
                            .padding(.top)
                        // Text(savedText)
                    }
-                   
+
                }.padding(.leading,10).padding(.trailing,10)
-               
-          
+
+
            }
-       
+
            .navigationTitle("Add Medicine")
            .listStyle(.insetGrouped)
                 }
- 
 
-        
+
+
         }
-    
+
     var DropDownMenu: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            
-            Text ("Frequancy")
+      VStack(alignment: .leading, spacing: 15) {
+
+            Text("Frequancy")
                 .padding()
                 .modifier(Items.TexStyleModifier())
-             
+
             DisclosureGroup(" \(selectedNum)", isExpanded: $IsExhandedList) {
                 ScrollView {
                     VStack {
@@ -165,28 +174,49 @@ struct add_medicine: View {
                                 }
                         }
                     }
-                    
+
                 }
                 .frame(height: 150)
-             //   .accentColor(.white)
-               // .font(.title2)
-               // .foregroundColor(.white)
-               // .padding(.all)
+            
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(8)
-                
+
             }.padding(.leading)
-        }
+       }
+
+
     }
-    
-    //Warning Label
+//    @State var image = ""
+//    @State var NameTF = ""
+//    @State var StrengthTF = ""
+//    @State var NumberOfPillTF = ""
+//    @State var textEditorInstructions: String = "Type Somthing ..."
+//    @State var DateOfBegine = Date()
+//    @State var DateOfEnd = Date()
+//    @State var EndingDate:Date = Calendar.current.date (from:
+//    DateComponents (year: 2018)) ?? Date()
+
+
+    func AddMedicine() {
+//        vmYourMedication.saveMedication(medicineReminder: [image,NameTF,StrengthTF,NumberOfPillTF,textEditorInstructions,DateOfBegine,DateOfEnd])
+        vmYourMedication.saveMedication(medicineReminder: image)
+        vmYourMedication.saveMedication(medicineReminder: NameTF)
+        vmYourMedication.saveMedication(medicineReminder: StrengthTF)
+        vmYourMedication.saveMedication(medicineReminder: NumberOfPillTF)
+        vmYourMedication.saveMedication(medicineReminder: textEditorInstructions)
+        
+        
+//        vmYourMedication.saveMedication(medicineReminder: DateOfBegine)
+//        vmYourMedication.saveMedication(medicineReminder: DateOfEnd)
+    }
+  
     var DropDownMenuTimeOfFrequancy: some View {
         VStack(alignment: .leading, spacing: 15) {
-            
+
             Text ("Time of Frequancy")
                 .padding()
                 .modifier(Items.TexStyleModifier())
-             
+
             DisclosureGroup(" \(selectedTime)", isExpanded: $IsExhandedList1) {
                 ScrollView {
                     VStack {
@@ -204,27 +234,24 @@ struct add_medicine: View {
                                 }
                         }
                     }
-                    
+
                 }
                 .frame(height: 150)
-             //   .accentColor(.white)
-               // .font(.title2)
-               // .foregroundColor(.white)
-               // .padding(.all)
+           
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(8)
-                
+
             }.padding(.leading)
         }
     }
-    
+
     var DropDownMenuWarningLabel: some View {
         VStack(alignment: .leading, spacing: 15) {
-            
+
             Text ("Warning Label")
                 .padding()
                 .modifier(Items.TexStyleModifier())
-             
+
             DisclosureGroup(" \(selectedWarningLabel)", isExpanded: $IsExhandedList2) {
                 ScrollView {
                     VStack {
@@ -242,84 +269,21 @@ struct add_medicine: View {
                                 }
                         }
                     }
-                    
+
                 }
                 .frame(height: 150)
-             //   .accentColor(.white)
-               // .font(.title2)
-               // .foregroundColor(.white)
-               // .padding(.all)
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(8)
-                
+
             }.padding(.leading)
         }
     }
- 
+
 }
-/*
- DatePicker("Select a date", selection: $selectedDate, in:
- startingDate...endingDate, displayedComponents: [.date])
- */
+
 struct add_medicine_Previews: PreviewProvider {
     static var previews: some View {
         add_medicine()
+            .environmentObject(YourMedicationListVM())
     }
 }
-
-
-//   NavigationView{
-//            ScrollView {
-//                Form {
-//                    Section{
-//                        Text("Medicine Name")
-//                            .modifier(Items.TexStyleModifier())
-//                        TextField("Medicine Name", text: $NameTF)
-//                            .modifier(Items.TextFieldModifier())
-//                    }
-//
-//                    Section{
-//                        Text("Strength")
-//                            .modifier(Items.TexStyleModifier())
-//                        TextField("Strength", text: $StrengthTF)
-//                            .modifier(Items.TextFieldModifier())
-//                            .keyboardType(.numberPad)
-//                    }
-//
-//                    Section{
-//                        Text("Number of pills that taking:")
-//                            .modifier(Items.TexStyleModifier())
-//                        TextField("Number of pills that taking:", text: $NumberOfPillTF)
-//                            .modifier(Items.TextFieldModifier())
-//
-//                    }
-//                    Section {
-//                        Text("Instructions")
-//                            .modifier(Items.TexStyleModifier())
-//                        TextEditor (text: $textEditorInstructions)
-//                            .frame (height: 250)
-//                            . foregroundColor(.black)
-//                            .colorMultiply(Color.gray.opacity(0.2))
-//                            .cornerRadius (10)
-//                            .padding(.leading,15)
-//                            .padding(.trailing)
-//
-//                    }
-//
-//                    Button {
-//                        // savedText = textEditorText
-//                    } label: {
-//                        Text("Add")
-//
-//                    } .modifier(Items.ButtonModifier())
-//                        .padding(.top)
-//
-//                    // Text(savedText)
-//
-//                }
-//                .navigationBarTitle("Add Medicine")
-//                .formStyle(.columns)
-//
-//            }
-//
-//        }

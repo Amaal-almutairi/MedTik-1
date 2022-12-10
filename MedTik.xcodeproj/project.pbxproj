@@ -14,6 +14,10 @@
 		E00C295129405EAD00FEDD6D /* MedTik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E00C294F29405EAD00FEDD6D /* MedTik.xcdatamodeld */; };
 		E00C29802941C7D700FEDD6D /* add medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C297F2941C7D700FEDD6D /* add medicine.swift */; };
 		E00C29822941CCF700FEDD6D /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C29812941CCF700FEDD6D /* Items.swift */; };
+		E00C29842943BBE800FEDD6D /* ListViewMedicationLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C29832943BBE800FEDD6D /* ListViewMedicationLCell.swift */; };
+		E00C29882944C51B00FEDD6D /* ModelListMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C29872944C51B00FEDD6D /* ModelListMedication.swift */; };
+		E02F00842944EE4C0036731B /* MediciationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02F00832944EE4C0036731B /* MediciationView.swift */; };
+		E02F00862945170E0036731B /* ViewModelYourMediciationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02F00852945170E0036731B /* ViewModelYourMediciationList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		E00C295229405EAD00FEDD6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E00C297F2941C7D700FEDD6D /* add medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "add medicine.swift"; sourceTree = "<group>"; };
 		E00C29812941CCF700FEDD6D /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		E00C29832943BBE800FEDD6D /* ListViewMedicationLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewMedicationLCell.swift; sourceTree = "<group>"; };
+		E00C29872944C51B00FEDD6D /* ModelListMedication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListMedication.swift; sourceTree = "<group>"; };
+		E02F00832944EE4C0036731B /* MediciationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediciationView.swift; sourceTree = "<group>"; };
+		E02F00852945170E0036731B /* ViewModelYourMediciationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelYourMediciationList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 		E00C293829405EAC00FEDD6D = {
 			isa = PBXGroup;
 			children = (
+				E00C29832943BBE800FEDD6D /* ListViewMedicationLCell.swift */,
 				E00C294329405EAC00FEDD6D /* MedTik */,
 				E00C294229405EAC00FEDD6D /* Products */,
 			);
@@ -61,7 +70,10 @@
 				E00C294429405EAC00FEDD6D /* MedTikApp.swift */,
 				E00C294829405EAD00FEDD6D /* Assets.xcassets */,
 				E00C294D29405EAD00FEDD6D /* Persistence.swift */,
+				E02F00852945170E0036731B /* ViewModelYourMediciationList.swift */,
 				E00C297F2941C7D700FEDD6D /* add medicine.swift */,
+				E02F00832944EE4C0036731B /* MediciationView.swift */,
+				E00C29872944C51B00FEDD6D /* ModelListMedication.swift */,
 				E00C29812941CCF700FEDD6D /* Items.swift */,
 				E00C295229405EAD00FEDD6D /* Info.plist */,
 				E00C294F29405EAD00FEDD6D /* MedTik.xcdatamodeld */,
@@ -149,9 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E00C29802941C7D700FEDD6D /* add medicine.swift in Sources */,
+				E02F00842944EE4C0036731B /* MediciationView.swift in Sources */,
 				E00C29822941CCF700FEDD6D /* Items.swift in Sources */,
+				E00C29882944C51B00FEDD6D /* ModelListMedication.swift in Sources */,
+				E02F00862945170E0036731B /* ViewModelYourMediciationList.swift in Sources */,
 				E00C294E29405EAD00FEDD6D /* Persistence.swift in Sources */,
 				E00C295129405EAD00FEDD6D /* MedTik.xcdatamodeld in Sources */,
+				E00C29842943BBE800FEDD6D /* ListViewMedicationLCell.swift in Sources */,
 				E00C294529405EAC00FEDD6D /* MedTikApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
