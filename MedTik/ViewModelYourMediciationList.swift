@@ -13,7 +13,7 @@ class YourMedicationListVM:ObservableObject{
     @Published var NameTF = ""
     @Published var MedicineName = ""
     @Published var StrengthTF = ""
-    @Published var NumberOfPillTF = ""
+    @Published var NumberOfPillTF = "Take 1 pill"
     @Published var textEditorInstructions: String = "Type Somthing ..."
     @Published var DateOfBegine = Date()
     @Published var DateOfEnd = Date()

@@ -140,15 +140,14 @@ struct add_medicine: View {
                             NavigationLink("add", destination: MediciationView())
                                 .modifier(Items.ButtonModifier())
                         }
-                        .navigationTitle("Add Medicine")
+                       
                         
                     }
-       
-                    .listStyle(.plain)
+                    .navigationTitle("Add Medicine")
+                   
 
       
-        }
-  
+        } .listStyle(.plain)
         
     }
             var DropDownMenu: some View {

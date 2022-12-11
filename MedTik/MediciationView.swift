@@ -18,21 +18,23 @@ struct MediciationView: View {
     
     var body: some View {
         NavigationView {
-     
-            List{
-                VStack(alignment: .leading){
-                    ForEach(vmYourMedication.MedicineList) { medicine in
-                        ListViewMedicationLCell(Medicine: medicine)
-                          
-                    }
-                    .onDelete(perform:vmYourMedication.deltetMedication)
-                    .onMove(perform: vmYourMedication.MoveMediciation)
-                }
-                
-            }.listStyle(.plain)
            
-            
-        }
+                List{
+                 UpCommingCustomCell()
+                   
+                        
+                        ForEach(vmYourMedication.MedicineList) { medicine in
+                            ListViewMedicationLCell(Medicine: medicine)
+                            
+                        }
+                        .onDelete(perform:vmYourMedication.deltetMedication)
+                        .onMove(perform: vmYourMedication.MoveMediciation)
+                    }
+                    
+                }.listStyle(.plain)
+                
+            }
+       //}
     
         
             
@@ -40,7 +42,7 @@ struct MediciationView: View {
   
       
         
-    }
+  
 
 
 struct MediciationView_Previews: PreviewProvider {

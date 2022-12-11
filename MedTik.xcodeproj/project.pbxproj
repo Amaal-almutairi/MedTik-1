@@ -18,6 +18,7 @@
 		E00C29882944C51B00FEDD6D /* ModelListMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C29872944C51B00FEDD6D /* ModelListMedication.swift */; };
 		E02F00842944EE4C0036731B /* MediciationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02F00832944EE4C0036731B /* MediciationView.swift */; };
 		E02F00862945170E0036731B /* ViewModelYourMediciationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02F00852945170E0036731B /* ViewModelYourMediciationList.swift */; };
+		E0606BFD2946464B0093B1A6 /* UpCommingCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0606BFC2946464B0093B1A6 /* UpCommingCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E00C29872944C51B00FEDD6D /* ModelListMedication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListMedication.swift; sourceTree = "<group>"; };
 		E02F00832944EE4C0036731B /* MediciationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediciationView.swift; sourceTree = "<group>"; };
 		E02F00852945170E0036731B /* ViewModelYourMediciationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelYourMediciationList.swift; sourceTree = "<group>"; };
+		E0606BFC2946464B0093B1A6 /* UpCommingCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				E02F00852945170E0036731B /* ViewModelYourMediciationList.swift */,
 				E00C297F2941C7D700FEDD6D /* add medicine.swift */,
 				E02F00832944EE4C0036731B /* MediciationView.swift */,
+				E0606BFC2946464B0093B1A6 /* UpCommingCustomCell.swift */,
 				E00C29872944C51B00FEDD6D /* ModelListMedication.swift */,
 				E00C29812941CCF700FEDD6D /* Items.swift */,
 				E00C295229405EAD00FEDD6D /* Info.plist */,
@@ -166,6 +169,7 @@
 				E00C29882944C51B00FEDD6D /* ModelListMedication.swift in Sources */,
 				E02F00862945170E0036731B /* ViewModelYourMediciationList.swift in Sources */,
 				E00C294E29405EAD00FEDD6D /* Persistence.swift in Sources */,
+				E0606BFD2946464B0093B1A6 /* UpCommingCustomCell.swift in Sources */,
 				E00C295129405EAD00FEDD6D /* MedTik.xcdatamodeld in Sources */,
 				E00C29842943BBE800FEDD6D /* ListViewMedicationLCell.swift in Sources */,
 				E00C294529405EAC00FEDD6D /* MedTikApp.swift in Sources */,
