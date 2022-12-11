@@ -23,11 +23,10 @@ struct Items: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
-            // .background(Color.gray.opacity(0.1))
+            .background(Color.gray.opacity(0.1))
                 .background(Color.teal)
                 .cornerRadius(10)
-                .padding(.leading)
-                .padding(.trailing)
+                .padding()
         }
     }
     struct TexStyleModifier: ViewModifier {
@@ -35,11 +34,11 @@ struct Items: View {
         func body(content: Content) -> some View {
             content
                 .font(.headline)
-                .lineLimit(2)
-                .minimumScaleFactor(0.5)
+              //  .lineLimit(2)
+               // .minimumScaleFactor(0.5)
                 .foregroundColor(.black)
             
-//                .padding(.leading)
+              //  .padding()
 //                .padding(.trailing)
         }
     }
@@ -48,15 +47,14 @@ struct Items: View {
         func body(content: Content) -> some View {
             content
                 .font(.headline)
-                .lineLimit(2)
-                .padding(.leading)
+                .lineLimit(1)
+                .padding()
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
                 .background(Color(.placeholderText).opacity(0.1))
                 .cornerRadius(10)
-                .padding(.bottom,10)
-                .padding(.horizontal)
+               
         }
     }
     
@@ -64,7 +62,29 @@ struct Items: View {
         func body(content: Content) -> some View {
             content
  
+                .frame(width: 30,height: 30)
+                .cornerRadius(50)
+                .frame(width: 100, height: 100)
+                .background(Color.teal)
+                .aspectRatio(contentMode: .fill)
+                .clipShape(Circle())
+                .padding(.horizontal,40)
+                .padding(.leading,50)
             
+        }
+    }
+    
+    struct MedicineImagedModifier: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+ 
+                .frame(width: 30,height: 30)
+                .cornerRadius(50)
+                .frame(width: 100, height: 100)
+                .background(Color.teal)
+                .aspectRatio(contentMode: .fill)
+                .clipShape(Circle())
+                .padding(.horizontal, 10.0)
             
         }
     }
@@ -88,7 +108,8 @@ struct Items: View {
             
         }
     }
-    
+  
+
     
    // @State var current_date = Date()
 //      var limitRange: ClosedRange<Date> {
@@ -97,10 +118,13 @@ struct Items: View {
 //          return tenDaysAgo...fiveDaysFromNow
 //      }
    /// @State var selectedDate = Date()
-    var body: some View {
-        Text("")
+ 
+        
+        var body: some View {
+          Text("")
+        }
 //        VStack(alignment:.leading){
-//            
+//
 //     HStack{
 //         Image(systemName: "photo.circle")
 //             .resizable()
@@ -125,7 +149,7 @@ struct Items: View {
 //             }
 //         }
 //     }
-//   
+//
 // }.padding(20) //.border(.black)
         
 //           HStack{
@@ -134,7 +158,7 @@ struct Items: View {
 //                        .resizable()
 //                        .scaledToFit()
 //                        .frame(height: 81)
-//                
+//
 //                }
 //               VStack(alignment:.leading){
 //            HStack{
@@ -142,7 +166,7 @@ struct Items: View {
 //                    .modifier(Items.TexStyleModifier())
 //                Text("500 mg")
 //                    .modifier(Items.TexStyleModifier())
-//        
+//
 //            }.padding(.leading,2)
 //            HStack{
 //                Image(systemName: "timer")
@@ -155,9 +179,9 @@ struct Items: View {
 //                    .modifier(Items.TexStyleModifier())
 //            }
 //        }
-//            
+//
 //           } .padding(20) //.border(.black)
-//            
+//
            // Spacer()
       
             
@@ -181,7 +205,7 @@ struct Items: View {
         
 //        DatePicker("Select event date and time", selection: $selectedDate, displayedComponents: [.date, .hourAndMinute])
 //
-   }
+
 }
 
 struct Items_Previews: PreviewProvider {

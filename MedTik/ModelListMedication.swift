@@ -9,18 +9,24 @@ import Foundation
 
 
 
-struct ListMediciations : Identifiable, Hashable {
+struct ListMediciations : Identifiable {
     var id = UUID().uuidString
-    var image:String
     var name:String
+    var image:String
+    var MedicineName:String
     var Strength: String
     var NumberOfPills:String
     var instruction: String
-    var WarningLabel:String
+  //  var WarningLabel:String
     var Frequancy:String
     var DateOfBegine:Date
     var DateOfEnd:Date
     var TimeOfFrequancy:String
-    var TimeOfDose:String
+    var TimeOfDose:Date
   
+}
+
+struct person {
+    var name:String
+   var MediciationsDetails:[ListMediciations]
 }

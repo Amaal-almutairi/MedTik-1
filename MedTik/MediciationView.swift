@@ -22,7 +22,7 @@ struct MediciationView: View {
             List{
                 VStack(alignment: .leading){
                     ForEach(vmYourMedication.MedicineList) { medicine in
-                        ListViewMedicationLCell( Medicine: medicine)
+                        ListViewMedicationLCell(Medicine: medicine)
                           
                     }
                     .onDelete(perform:vmYourMedication.deltetMedication)
